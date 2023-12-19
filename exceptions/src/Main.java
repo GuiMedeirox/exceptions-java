@@ -1,17 +1,11 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = null;
-
         System.out.println("MAIN");
-        m1();
-        try{
+        try {
             m1();
-//            sc.next();
-        }catch (ArithmeticException | NullPointerException e){
-            e.printStackTrace();
-            System.out.println(e.getMessage());
-
+        } catch(ArithmeticException ex){
+            System.out.println(ex.getMessage());
         }
         System.out.println("MAINF");
 
@@ -25,12 +19,7 @@ public class Main {
 
     static  void m2(){
         System.out.println("M2");
-        int a = 0;
-        for (int i = 0; i < 5; i++) {
-            a = a / 0;
-            System.out.println(a);
-        }
-        System.out.println("FM2");
+        throw new ArithmeticException("Erro de ArithmeticException Customizado");
     }
 
 }
