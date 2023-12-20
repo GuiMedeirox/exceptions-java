@@ -4,10 +4,13 @@ import java.util.zip.DataFormatException;
 public class Main {
     public static void main(String[] args) {
 
-        try(Conexao con = new Conexao()){
+        Conexao con = new Conexao();
+        try{
             con.leDados();
         } catch(IllegalStateException ex){
             System.out.println(ex.getMessage());
+        } finally {
+            con.fecharConexao();
         }
 
     }
