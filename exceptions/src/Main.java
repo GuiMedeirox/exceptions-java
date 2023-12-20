@@ -5,10 +5,9 @@ public class Main {
     public static void main(String[] args) {
         Account a = new Account();
         try {
-            a.toDeposit(-20);
+            a.toDeposit(-10);
         } catch (NegativeDepositException ex){
             System.out.println(ex.getMessage());
         }
     }
-
 }
