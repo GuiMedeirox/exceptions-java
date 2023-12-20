@@ -10,7 +10,7 @@ public class Conexao implements  AutoCloseable{
     }
 
     @Override
-    public void close() {
+    public void close() throws IllegalStateException{
         System.out.println("Fechando conexao");
     }
 }
